@@ -36,17 +36,30 @@
     sobre os valores e os principios que guiam a busca de nossa missão.</p>
     
     <script>
+      nr1 = 10;
+      var nr1;
+      var nr2 = 5;
+
+      if(nr1 >nr2){
+        console.warn("maior");
+      } else {
+        console.error("menor");
+      }
+
+      console.log(teste);
+
       //declarando uma constante utilizando o querySelector('nomeDoElemento')
       //HOYSTING - içar-levantar
       const cabecalho = document.querySelector('h1');
       cabecalho.textContent = 'Olá Fuking World!';
+      
 
       //Atrelando um evento ao botão e ordenando para ele executar a função.
       const botao = document.querySelector('#btnEnviar');
       botao.addEventListener('clic', escreve);
 
-      functuin escreve() {
-        let text = prompt('Escreva o novo texto!';)
+      function escreve() {
+        let text = prompt('Escreva o novo texto!');
         cabecalho.textContent = text;
       }
     </script>
