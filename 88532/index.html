@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="pt-br">
+  <meta charset="utf-8">
+  <title>Teste Page</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <h1>Mozilla da hora</h1>
+  <img src="img/firefox-icon.png" alt="Firefox logo: a chama que envolve a Terra.">
+
+  <p>Mozilla, comunidade global de</p>
+
+  <ul>
+    <li>tecnologistas</li>
+    <li>pensadores</li>
+    <li>construtores</li>
+  </ul>
+
+  <!-- Código javascript que deve ser evitado -->
+  <button value="btnEnviar" onclick="escreve()">ENVIAR</button>
+  <!-- Código javascript que deve ser evitado -->
+
+  <!-- Elemento HTML que pode ser utilizado em conjunto com o Javascript -->
+  <button id="btnEnviar">SUBMIT</button>
+  <!-- Elemento HTML que pode ser utilizado em conjunto com o Javascript -->
+
+  <p>Trabalhamos juntos para manter a internet viva e acessível, para que as pessoas em todo o mundo possam ser
+    contribuidores informados e criadores da web. Acreditamos que este ato de colaboração humana em uma plataforma
+    aberta é essencial para o crescimento indivídual e o nosso futuro coletivo.</p>
+
+  <p>Leia o <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> para aprender mais
+    sobre os valores e os principios que guiam a busca de nossa missão.</p>
+
+  <script>
+    nr1 = 10;
+    var nr1;
+    var nr2 = 5;
+
+    if (nr1 > nr2) {
+      console.warn("MAIOR");
+      nr1 = "TEXTO";
+      console.info("VALOR DE NR1 : " + nr1);
+    } else {
+      console.error("MENOR");
+    }
+
+    //Declarando uma constante utilizando o querySelector('nomeDoElemento')
+    //HOYSTING
+    const cabecalho = document.querySelector('h1');
+    cabecalho.textContent = 'Olá Mundo!';
+    //cabecalho.style.backgroundColor = '#0000ff';
+
+    //Atrelando um evento ao botão e ordenando para ele executar a função.
+    const botao = document.querySelector('#btnEnviar');
+    botao.addEventListener('click', escreve);
+
+    function escreve() {
+      let text = prompt('Escreva o novo texto!');
+      cabecalho.textContent = text;
+    }
+  </script>
+</body>
+
+</html>
