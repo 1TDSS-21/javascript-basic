@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMC</title>
 </head>
 <body>
+    <ul>
+        <a href="./imc.html">IMC</a>
+        <a href="./media.html">Media</a>
+        <a href="./maior.html">Maior</a>
+        <a href="./idade.html">Idade</a>
+    </ul>
+
     <label for="altura">Informe sua altura</label>
     <input type="text" id="altura">
-    <label for="altura">Informe seu peso</label>
+    <label for="peso">Informe seu peso</label>
     <input type="text" id="peso">
+    <button id="btn">Calcular IMC</button>
 
     <script>
+        document.querySelector('#btn').addEventListener('click', ()=> {
+            altura = parseFloat(document.getElementById("altura").value);
+            peso = parseFloat(document.getElementById("peso").value);
         
+            imc = peso / (altura * altura)
+        
+            console.log("O IMC é " + imc)
+        });
     </script>
 </body>
 </html>

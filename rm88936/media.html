@@ -6,6 +6,13 @@
     <title>Média</title>
 </head>
 <body>
+    <ul>
+        <a href="./media.html">Media</a>
+        <a href="./imc.html">IMC</a>
+        <a href="./maior.html">Maior</a>
+        <a href="./idade.html">Idade</a>
+    </ul>
+
     <label for="nota">Informe as notas</label>
     <input type="number" id="nota1">
     <input type="number" id="nota2">
@@ -18,10 +25,7 @@
         
             media = (nota1 + nota2)/2 ;
         
-            if (media >= 7)
-               alert("Aprovado! Média: "+media);
-            else
-              alert("Reprovado! Média: "+media);
+            console.log("A média é " + media)
         });
     </script>
 

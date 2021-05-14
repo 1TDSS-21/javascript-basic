@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior</title>
+</head>
+<body>
+    <ul>
+        <a href="./idade.html">Idade</a>
+        <a href="./imc.html">IMC</a>
+        <a href="./media.html">Media</a>
+        <a href="./maior.html">Maior</a>
+    </ul>
+
+    <label for="idade">Informe sua idade</label>
+    <input type="text" id="idade">
+    <button id="btn">Calcular</button>
+
+    <script>
+        document.querySelector('#btn').addEventListener('click', ()=> {
+            idade = parseInt(document.getElementById("idade").value);
+        
+            if (idade >= 18) {
+                console.log("Você é maior de idade")
+            }else {
+                console.log("Você é menor de idade")
+            }
+        });
+    </script>
+</body>
+</html>
